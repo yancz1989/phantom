@@ -1,0 +1,11 @@
+build/*
+build/*.*
+.DS_Store*
+*.DS_Store
+*.o
+*.out
+in
+*.lib
+*.so
+*.a
+*.dylib
