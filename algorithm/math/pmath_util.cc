@@ -4,7 +4,7 @@
 * @Last Modified by:   yancz1989
 * @Last Modified time: 2016-01-08 15:51:38
 */
-#include "computing_geometry_util.h"
+#include "pmath.h"
 
 bool multi_cmp(int i, int j) {
 	double mul = MULTIP(0, i, j);

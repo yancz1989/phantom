@@ -10,10 +10,6 @@
 
 #include "../phantom.h"
 
-#include "util/util.h"
-#include "graph/graph.h"
-#include "computing_geometry/computing_geometry.h"
-
 #define END_LINE printf("\n")
 
 #define BYTE_INF 0x3f

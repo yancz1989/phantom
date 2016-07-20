@@ -2,7 +2,7 @@
 * @Author: yancz1989
 * @Date:   2016-01-19 17:37:39
 * @Last Modified by:   yancz1989
-* @Last Modified time: 2016-01-19 19:58:59
+* @Last Modified time: 2016-01-20 09:32:47
 */
 
 #include "../observer.h"
@@ -15,9 +15,9 @@ struct news{
 	char content[1024];
 };
 
-class large_agency : public publisher{
+class large_agency : public publisher<news>{
 public:
-	void nofity(long long id, void* data){
+	void notify(long long id, const news& data){
 		subs.find(id)->second->update(data);
 		printf("message sent to %lld\n", id);
 	}
@@ -25,16 +25,16 @@ public:
 		news nnews;
 		strcpy(nnews.title, "Breaking News, War Start!\n");
 		strcpy(nnews.content, "It's a joke, peace will stay the same.\n");
-		notify_all(&nnews);
+		notify_all(nnews);
 	}
 };
 
-class small_agency : public subscriber {
+
+class small_agency : public subscriber<news> {
 public:
 	small_agency(const char* _name){ strcpy(name, _name); }
-	void update(void* data) {
-		news *n = (news*)data;
-		printf("%s recieved news %s, content : %s\n", name, n->title, n->content);
+	void update(const news& data) {
+		printf("%s recieved news %s, content : %s\n", name, data.title, data.content);
 	}
 private:
 	char name[128];

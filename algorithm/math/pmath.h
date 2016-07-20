@@ -1,5 +1,11 @@
-#ifndef ALGORITHM_GEOMETRY_UTIL_H
-#define ALGORITHM_GEOMETRY_UTIL_H
+/*
+* @Author: yancz1989
+* @Date:   2016-07-15 10:33:00
+* @Last Modified by:   yancz1989
+* @Last Modified time: 2016-07-15 10:34:08
+*/
+#ifndef PHANTOM_MATH_H
+#define PHANTOM_MATH_H
 
 namespace phantom{
 namespace algorithm{
@@ -15,4 +21,5 @@ bool multi_cmp(int i, int j);
 }
 }
 }
+
 #endif
