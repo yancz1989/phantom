@@ -12,10 +12,10 @@
 
 #define END_LINE printf("\n")
 
-#define BYTE_INF 0x3f
-#define SHORT_INF 0x3fff
-#define INT_INF 0x3fffffff
-#define LL_INF 0x3fffffffffffffff
+#define INT8_INF 0x3f
+#define INT16_INF 0x3fff
+#define INT32_INF 0x3fffffff
+#define INT64_INF 0x3fffffffffffffff
 #define DOUBLE_INF 1.0e+300
 #define FLOAT_INF 3.0e+30
 

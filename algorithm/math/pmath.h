@@ -9,7 +9,7 @@
 
 namespace phantom{
 namespace algorithm{
-namespace computing_geometry{
+namespace math{
 #define DIF(i, j, idx) (point[(i << 1) | idx] - point[(j << 1) | idx])
 #define MULTIP(s, i, j) MULTI(DIF(i, s, 0), DIF(j, s, 0), DIF(i, s, 1), DIF(j, s, 1))
 #define DISTP(i, j) DIST(point[i << 1], point[j << 1], point[(i << 1) + 1], point[(j << 1) + 1])
